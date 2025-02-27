@@ -11,29 +11,45 @@
 :root{
     --accent: #22D4FD;
     --main: #000;
+    --hover: #272727;
     --text:#F6F6F6;
 }
 
-body{
-    height: 100vh; /* 100% do viewport height (vw) */
-    width:100%;
-    box-sizing:border-box; /* nos permite a adicionar padding e borders nos elementos de dentro desse container sem que eles extrapolem dos limites dele (como fariam no content-box)*/
-    
+header{
+    box-sizing:border-box;
+}
+
+.cabecalho{
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu{
     display:flex;
-    align-items:center;
+    gap:80px;
+}
+
+.cabecalho__menu__link{
+    color:var(--accent);
+    font-family:'Montserrat', sans serif;
+    font-weight:600;
+    font-size:24px;
+}
+
+body{
+    box-sizing:border-box; /* nos permite a adicionar padding e borders nos elementos de dentro desse container sem que eles extrapolem dos limites dele (como fariam no content-box)*/
 
     background-color: var(--main);
     color:var(--text);
+
+    overflow-y:scroll;
 }
 
 .apresentacao{
     display:flex;
-    width:100%;
-    
-    align-items:center;
+    align-items:center;    
     justify-content:space-between;
 
-    margin: 10% 15%;
+    padding: 5% 15%;
 }
 
 .apresentacao__conteudo{
@@ -53,13 +69,15 @@ body{
 }
 
 .apresentacao__conteudo__texto{
-    font-size:24px;
+    font-size:20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .apresentacao__conteudo__links{
     display:flex;
     flex-direction:column;
+    width:100%;
+    box-sizing: border-box;
 
     align-items: center;
     justify-content: space-between;
@@ -75,6 +93,11 @@ body{
     color:var(--text);
     border: 2px solid var(--accent);
     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
     text-align:center;    
     
     width:378px;
@@ -84,4 +107,17 @@ body{
     font-size:24px;
     font-family: 'Montserrat', sans-serif;
     font-weight:600;
+}
+.apresentacao__conteudo__links__link:hover{
+    background-color:var(--hover);
+}
+
+.rodape{
+    background-color: var(--accent);
+    color:var(--main);
+    padding: 24px;
+
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
